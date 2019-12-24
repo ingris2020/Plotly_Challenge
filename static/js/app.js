@@ -17,14 +17,17 @@ function createCharts(subject) {
       x: sample_values.slice(0, 10).reverse(),
       text: otu_labels.slice(0, 10).reverse(),
       type: "bar", 
-      orientation: "h"
+      orientation: "h",
+      
     }]
     var barLayout = {
       title: "Top 10 Bacteria Culture Found", 
+      paper_bgcolor: "lavender",
+      plot_bgcolor:"lavender",
+      font: { color: "black", family: "Arial" },
       margin: {
         t:50, 
-        l:150
-      }
+        l:150}
     }
 
     Plotly.newPlot("bar", barData, barLayout);
@@ -35,12 +38,14 @@ function createCharts(subject) {
         t:0
       },
       hovermode: "closest",
+      paper_bgcolor: "lavender",
       xaxis: {
         title: "OTU ID"
       },
       margin: {
         t:30
-      }
+      },
+      plot_bgcolor:"lavender"
     };
     var bubbleData = 
     [{
@@ -86,7 +91,7 @@ function optionChanged(subject)
   console.log("dropdown selection", subject);
   createCharts(subject);
   createMetada(subject);
-
+  createGaugeChart(subject);
 }
 
 //Initialize Page
@@ -107,7 +112,7 @@ function displayPage()
     var firstsubject = subjectNames[0];
     createCharts(firstsubject);
     createMetada(firstsubject);
-  
+    createGaugeChart(firstsubject);
   });
 
 }

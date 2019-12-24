@@ -13,14 +13,14 @@
 
   <div class="container" style="background-color: rgb(240, 247, 252);">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center" style="background-color: rgba(124, 252, 113, 0.351);" > 
+      <div class="col-md-12 jumbotron text-center" style="background-color: rgba(216, 201, 252, 0.351);" > 
         <h1><strong>Belly Button Biodiversity Dashboard </strong></h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-2">
-        <div class="well" style="background-color: rgba(113, 178, 252, 0.276); color: rgb(64, 64, 65);">
+        <div class="well" style="background-color: rgba(200, 185, 252, 0.276); color: rgb(64, 64, 65);">
           <h5><strong>Test Subject ID No.: </strong></h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
@@ -28,7 +28,7 @@
           <div class="panel-heading" style="color: rgb(255, 255, 255);">
             <h3 class="panel-title"><strong>Demographic Info</strong></h3>
           </div>
-          <div id="sample-metadata" class="panel-body" style="background-color: rgba(113, 178, 252, 0.221);"></div>
+          <div id="sample-metadata" class="panel-body" style="background-color: rgba(152, 200, 255, 0.221);"></div>
         </div>
       </div>
       <div class="col-md-5">
@@ -40,7 +40,8 @@
     </div>
     <div class="row">
       <div class="col-md-12"  style="background-color: rgb(248, 249, 254);">
-        <div id="bubble" </div>
+        <div id="bubble" ></div>
+      
       </div>
     </div>
   </div>
@@ -48,7 +49,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="./static/js/app.js"></script>
- 
+  <script src="./static/js/bonus.js"></script>
 
 </body>
 <footer style="font-size: small; text-align: center"> 
