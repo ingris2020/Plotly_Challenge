@@ -26,25 +26,21 @@ function createCharts(subject) {
       plot_bgcolor:"lavender",
       font: { color: "black", family: "Arial" },
       margin: {
-        t:50, 
-        l:150}
+        t:70, 
+        l:100},
+      font: { color: "black", family: "Arial", size:13}
+      
     }
 
     Plotly.newPlot("bar", barData, barLayout);
     //create bubble chart
     var bubbleLayout = {
       title: "Bacteria Cultures Per Subject",
-      margin: {
-        t:0
-      },
+      margin: {t:80, b: 50 },
       hovermode: "closest",
       paper_bgcolor: "lavender",
-      xaxis: {
-        title: "OTU ID"
-      },
-      margin: {
-        t:30
-      },
+      xaxis: {title: "OTU ID"},
+      font: { color: "black", family: "Arial", size:16},
       plot_bgcolor:"lavender"
     };
     var bubbleData = 

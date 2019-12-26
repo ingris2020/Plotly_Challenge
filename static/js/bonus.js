@@ -13,7 +13,8 @@ function createGaugeChart (subject) {
     var gaugeData = [{
 		domain: { x: [0, 1], y: [0, 1] },
 		value: wfreq,
-    title: { text: "Belly Button Washing Frequency"},
+    title: { text: "Belly Button Washing Frequency",
+              margin: { t: 50, b: 10 }   },
 		type: "indicator",
     mode: "gauge+number+delta",
     delta: { reference: 5 },
@@ -29,9 +30,10 @@ function createGaugeChart (subject) {
       { range: [8,10], color: "lightgreen" }]
     } 
     }];
-    var layout = { width: 460, height: 450, margin: { t: 10, b: 0 }, 
+    var layout = { width: 460, height: 450, margin: { t: 10, b: 10 }, 
     paper_bgcolor: "lavender",
-    font: { color: "black", family: "Arial" }
+    font: { color: "black", family: "Arial", size:20},
+    titlefont: {size:50}
     };
 
     Plotly.newPlot('gauge', gaugeData, layout);
